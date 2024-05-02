@@ -9,7 +9,7 @@ window.addEventListener("scroll", function () {
     navBar.style.background = "#000000";
     arrow.style.display = "block";
   } else {
-    navBar.style.background = "";
+    navBar.style.background = "transparent";
     arrow.style.display = "none";
   }
 

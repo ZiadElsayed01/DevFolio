@@ -1,6 +1,9 @@
 body {
   background-color: #f5f5f5;
 }
+.main-head {
+  font-size: 55px;
+}
 .main-p {
   position: relative;
   font-size: 20px;
@@ -38,7 +41,9 @@ body {
   border-radius: 50%;
   text-align: center;
   display: none;
+  z-index: 99999;
 }
+
 /* Start Navbar */
 .nav-item {
   position: relative;
@@ -53,10 +58,12 @@ body {
   bottom: 0;
   left: 0;
   background-color: white;
-  margin-left: inherit;
 }
 .nav-item:hover::after {
   width: 50%;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
 }
 .dropdown-item {
   transition: all 0.5s;
@@ -71,6 +78,7 @@ body {
     padding: 15px;
     margin: 10px;
     background-color: white;
+    z-index: 9999;
   }
   nav .content ul li a {
     padding: 10px 20px !important;
@@ -82,6 +90,7 @@ body {
   }
 }
 /* End Navbar */
+
 /* Sart Hero */
 .hero {
   background-image: url(../images/hero-bg-501.jpg);
@@ -182,6 +191,7 @@ body {
   }
 }
 /* End Hero */
+
 /* Start About */
 .about .content {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
@@ -189,8 +199,9 @@ body {
 .about .text p {
   font-size: 18px !important;
 }
-
 /* End About */
+
+/* Start Services */
 .card {
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
 }
@@ -208,10 +219,6 @@ body {
 .services .container .card-body .card-text {
   color: rgb(78, 78, 78);
 }
-.main-head {
-  font-size: 55px;
-}
-/*  */
 .services .counter {
   background-image: url(../images/counters-bg-327.jpg);
   background-position: top;
@@ -233,12 +240,14 @@ body {
   background-color: rgba(13, 109, 253, 0.7);
   z-index: -1;
 }
-.counter .icon {
+.services .counter .icon {
   border: 10px solid hsl(212, 75%, 89%);
   width: 90px;
   height: 90px;
 }
-/* Start Portfolio*/
+/* End Services */
+
+/* Start Portfolio */
 .portfolio .card .image-container {
   overflow: hidden;
 }
@@ -288,6 +297,8 @@ body {
   border-radius: 50%;
 }
 /* End Portfolio */
+
+/* Start Blog */
 .blog .card .card-image {
   position: relative;
 }
@@ -311,6 +322,9 @@ body {
   color: #4e4e4e;
   font-size: 20px;
 }
+/* End Blog */
+
+/* Start Contact */
 input,
 textarea {
   border: 1px solid #dee2e6;
@@ -350,6 +364,10 @@ textarea:focus {
   color: white;
   background-color: #0d6efd;
 }
+/* End Contact */
+
+/* Start Footer */
 footer {
   background-color: #0062d3;
 }
+/* End Footer */
