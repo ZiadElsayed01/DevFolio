@@ -1,0 +1,355 @@
+body {
+  background-color: #f5f5f5;
+}
+.main-p {
+  position: relative;
+  font-size: 20px;
+}
+.main-p::after {
+  content: "";
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0d6efd;
+  width: 50px;
+  height: 4px;
+}
+.sub-title {
+  position: relative;
+}
+.sub-title::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  height: 4px;
+  background-color: #0d6efd;
+  width: 100px;
+}
+.arrow {
+  background: #0d6efd;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  text-align: center;
+  display: none;
+}
+/* Start Navbar */
+.nav-item {
+  position: relative;
+  font-size: 18px;
+}
+.nav-item::after {
+  transition: all 0.5s;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  margin-left: inherit;
+}
+.nav-item:hover::after {
+  width: 50%;
+}
+.dropdown-item {
+  transition: all 0.5s;
+  background-color: transparent;
+}
+.dropdown-item:hover {
+  color: #0d6efd !important;
+}
+@media (max-width: 992px) {
+  nav .content {
+    min-height: 90vh;
+    padding: 15px;
+    margin: 10px;
+    background-color: white;
+  }
+  nav .content ul li a {
+    padding: 10px 20px !important;
+    font-size: 15px !important;
+    color: #4e4e4e !important;
+  }
+  nav .content ul li a:hover {
+    color: #0d6efd !important;
+  }
+}
+/* End Navbar */
+/* Sart Hero */
+.hero {
+  background-image: url(../images/hero-bg-501.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.hero h1 {
+  font-size: 72px;
+}
+.animated-text {
+  font-size: 34px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
+}
+.hero .animated-text span {
+  position: relative;
+}
+.hero .animated-text span::before {
+  content: "Designer";
+  animation: words 20s infinite;
+}
+.hero .animated-text span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: rgba(0, 0, 0);
+  border-left: 4px solid white;
+  right: -10px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+  to {
+    border-left: 4px solid transparent;
+  }
+}
+@keyframes words {
+  0%,
+  20% {
+    content: "Designer";
+  }
+  21%,
+  40% {
+    content: "Developer";
+  }
+  41%,
+  60% {
+    content: "Freelancer";
+  }
+  61%,
+  80% {
+    content: "Photography";
+  }
+  81%,
+  100% {
+    content: "Designer";
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+/* End Hero */
+/* Start About */
+.about .content {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.about .text p {
+  font-size: 18px !important;
+}
+
+/* End About */
+.card {
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+.card .icon {
+  border: 10px solid #0d6efd;
+  width: 100px;
+  height: 100px;
+  transition: all 0.5s;
+}
+.services .container .card:hover .icon {
+  background-color: #0d6efd;
+  color: white !important;
+  border-color: #cfe2ff !important;
+}
+.services .container .card-body .card-text {
+  color: rgb(78, 78, 78);
+}
+.main-head {
+  font-size: 55px;
+}
+/*  */
+.services .counter {
+  background-image: url(../images/counters-bg-327.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.services .counter {
+  position: relative;
+  z-index: 2;
+}
+.services .counter::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(13, 109, 253, 0.7);
+  z-index: -1;
+}
+.counter .icon {
+  border: 10px solid hsl(212, 75%, 89%);
+  width: 90px;
+  height: 90px;
+}
+/* Start Portfolio*/
+.portfolio .card .image-container {
+  overflow: hidden;
+}
+.portfolio .card img {
+  transition: all 0.8s ease;
+}
+.portfolio .card:hover img {
+  transform: scale(1.3);
+}
+.portfolio .info .plus-icon {
+  width: 55px;
+  height: 55px;
+  border: 4px solid #0d6efd;
+}
+.portfolio .team,
+.contact {
+  background-image: url(../images/overlay-bg-559.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+.portfolio .team::after,
+.contact::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(13, 109, 253, 0.7);
+  z-index: -1;
+}
+.portfolio .carousel-item img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+.carousel-indicators {
+  bottom: -80px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+/* End Portfolio */
+.blog .card .card-image {
+  position: relative;
+}
+.blog .card .card-image .card-image-info {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+}
+.list-group-item .image img {
+  width: 40px;
+  height: 40px;
+}
+.card-text,
+.list-group-item a {
+  color: #4e4e4e;
+  font-size: 18px;
+}
+.list-group-item p {
+  color: #4e4e4e;
+  font-size: 20px;
+}
+input,
+textarea {
+  border: 1px solid #dee2e6;
+  color: #4e4e4e;
+  transition: all 0.3s ease;
+  outline: 0;
+}
+input:focus,
+textarea:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 4px #0d6efd40;
+}
+.form-btn {
+  border-radius: 40px;
+  transition: all 0.5s ease;
+}
+.form-btn:hover {
+  background: #3393ff;
+  box-shadow: 0 0 0 4px #cde1f8;
+}
+.contact .text {
+  font-size: 20px;
+}
+.contact .contact-info .box i {
+  font-size: 20px;
+}
+.contact .contact-info .box p {
+  font-size: 20px;
+  color: #454545;
+}
+.contact .social i {
+  border: 5px solid #0d6efd;
+  transition: all 0.5s ease;
+}
+.contact .social i:hover {
+  box-shadow: 0 0 0 4px #cde1f8;
+  color: white;
+  background-color: #0d6efd;
+}
+footer {
+  background-color: #0062d3;
+}
